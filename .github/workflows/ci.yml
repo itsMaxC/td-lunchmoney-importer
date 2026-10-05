@@ -19,10 +19,10 @@ jobs:
         python-version: ['3.9', '3.11']
 
     steps:
-    - uses: actions/checkout@v6.0.2
+    - uses: actions/checkout@v6.1.0
 
     - name: Set up Python
-      uses: actions/setup-python@v6.2.0
+      uses: actions/setup-python@v6.3.0
       with:
         python-version: ${{ matrix.python-version }}
         cache: 'pip'
@@ -54,10 +54,10 @@ jobs:
         os: [windows-latest, macos-latest, ubuntu-latest]
 
     steps:
-    - uses: actions/checkout@v6.0.2
+    - uses: actions/checkout@v6.1.0
 
     - name: Set up Python 3.11
-      uses: actions/setup-python@v6.2.0
+      uses: actions/setup-python@v6.3.0
       with:
         python-version: '3.11'
         cache: 'pip'
@@ -76,7 +76,7 @@ jobs:
         options: --onefile --name "td-lunchmoney-importer"
 
     - name: Upload smoke artifact
-      uses: actions/upload-artifact@v7.0.0
+      uses: actions/upload-artifact@v7.0.1
       with:
         name: smoke-${{ matrix.os }}
         path: dist/td-lunchmoney-importer*
