@@ -76,7 +76,7 @@ jobs:
         options: --onefile --name "td-lunchmoney-importer"
 
     - name: Upload smoke artifact
-      uses: actions/upload-artifact@v7.0.1
+      uses: actions/upload-artifact@v7.0.2
       with:
         name: smoke-${{ matrix.os }}
         path: dist/td-lunchmoney-importer*
